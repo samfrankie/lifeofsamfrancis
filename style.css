@@ -1,74 +1,510 @@
+/* Import Google Fonts - Ensure these are linked in your HTML <head> as well */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+
+
 /* =========================================================================
-   General Body and Typography
+   Global Styles & Background
    ========================================================================= */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Primary font */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f9;
-    color: #333;
+    background-color: #0d0d0d; /* Dark background */
+    color: #e0e0e0; /* Light text for dark background */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative; /* For background gradient positioning */
+    min-height: 100vh;
+}
+
+/* Background Gradient Effect - Adapted from your image */
+.background-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(200, 50, 255, 0.15) 0%, rgba(0,0,0,0) 25%),
+                radial-gradient(circle at 90% 80%, rgba(50, 200, 255, 0.15) 0%, rgba(0,0,0,0) 25%),
+                radial-gradient(ellipse at 50% 50%, rgba(100, 0, 255, 0.05) 0%, rgba(0,0,0,0) 50%);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    z-index: -1;
+    pointer-events: none; /* Allows interaction with content below */
 }
 
 .container {
-    max-width: 960px;
-    margin: 2rem auto;
+    max-width: 1200px; /* Wider container for the modern look */
+    margin: 0 auto; /* Center the container */
     padding: 2rem;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background-color: transparent; /* Transparent to show background */
+    box-shadow: none; /* No box shadow on container */
+    border-radius: 0;
 }
 
 h1, h2, h3 {
-    font-family: 'Roboto', 'Segoe UI', sans-serif;
-    color: #2c3e50;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* White headings */
     margin-top: 0;
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3.8rem; /* Larger hero title */
     font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
-    font-size: 2rem;
-    border-bottom: 3px solid #3498db;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    border-bottom: none; /* No border under sections */
+    padding-bottom: 0;
+    margin-bottom: 2rem;
+    text-align: center; /* Center section titles */
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #e0e0e0;
 }
 
 p {
+    font-family: 'Roboto Mono', monospace; /* Monospace for body text as in image */
     font-size: 1rem;
-    color: #555;
+    color: #b0b0b0; /* Lighter grey for body text */
+}
+
+a {
+    color: #8c52ff; /* Default link color for accents */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a370ff;
+    text-decoration: underline;
 }
 
 /* =========================================================================
    Header & Navigation
    ========================================================================= */
-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2rem;
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 4rem; /* More space below header */
 }
 
-header p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.main-nav a {
+    color: #e0e0e0;
+    margin: 0 1.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 0; /* For better hover effect padding */
+}
+
+.main-nav a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Underline on hover for nav links */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #8c52ff;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #8c52ff;
+}
+
+/* Nav button style */
+.nav-button {
+    background: linear-gradient(90deg, #cb3bf5, #8c52ff); /* Neon gradient */
+    padding: 0.7rem 1.8rem;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #ffffff !important; /* Override default link color */
+    box-shadow: 0 4px 15px rgba(140, 82, 255, 0.4);
+    transition: all 0.3s ease;
+    margin-left: 1.5rem; /* Space from other nav items */
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(140, 82, 255, 0.6);
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.header-icon {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* =========================================================================
-   Sections & Layout
+   Hero Section
+   ========================================================================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 0 8rem;
+    position: relative;
+    overflow: hidden; /* For containing potential background elements */
+}
+
+.hero-content {
+    max-width: 55%; /* Adjust width for text */
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.hero-section .subtitle {
+    font-size: 1.5rem;
+    color: #a370ff; /* Neon accent color */
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.hero-section .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 80%;
+}
+
+.hero-image-placeholder {
+    position: relative;
+    width: 40%; /* Adjust width for image area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Ensure it has height */
+}
+
+.colorful-blob {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(135deg, #ff00ff, #00ffff); /* Vibrant gradient */
+    border-radius: 25px; /* Rounded square */
+    box-shadow: 0 0 50px rgba(255, 0, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.5); /* Neon glow */
+    position: relative;
+    z-index: 1;
+}
+
+.overlay-numbers {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 2; /* Ensure numbers are above blob */
+}
+
+.num-circle {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a370ff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(140, 82, 255, 0.2);
+}
+
+
+/* =========================================================================
+   Sections (General)
    ========================================================================= */
 .section {
-    margin-bottom: 3rem;
+    padding: 4rem 0; /* More padding for sections */
+    margin-bottom: 0; /* Adjust margin if needed, padding handles spacing */
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Subtle separator */
+}
+
+.section:first-of-type { /* No top border for the first section after hero */
+    border-top: none;
 }
 
 /* =========================================================================
+   About Me Section
+   ========================================================================= */
+.skills-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.skills-list li {
+    background-color: rgba(255, 255, 255, 0.05); /* Darker background for list items */
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #8c52ff; /* Accent border */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+}
+
+.skills-list li strong {
+    color: #ffffff;
+}
+
+/* =========================================================================
+   Portfolio Projects
+   ========================================================================= */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Darker background */
+    padding: 2rem;
+    border-left: 5px solid transparent; /* Transparent border, will use gradient on hover */
+    border-image: linear-gradient(to bottom, #cb3bf5, #8c52ff) 1; /* Initial gradient for effect */
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before { /* Gradient border effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #cb3bf5, #8c52ff);
+    opacity: 0.7; /* Make it slightly transparent */
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 25px rgba(140, 82, 255, 0.2);
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-card h3 a {
+    color: #ffffff; /* White title links */
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.project-card h3 a:hover {
+    color: #a370ff;
+}
+
+.project-card p {
+    color: #c0c0c0; /* Lighter grey for project descriptions */
+}
+
+.project-links {
+    margin-top: 1.5rem;
+}
+
+.project-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(90deg, #8c52ff, #cb3bf5); /* Neon gradient button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-right: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(140, 82, 255, 0.3);
+}
+
+.project-links a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(140, 82, 255, 0.5);
+    text-decoration: none;
+}
+
+/* =========================================================================
+   Social & Contact Links
+   ========================================================================= */
+.social-links {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 1.5rem;
+    color: #a370ff; /* Neon color */
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* =========================================================================
+   Footer
+   ========================================================================= */
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.main-footer a {
+    color: #888;
+}
+
+.main-footer a:hover {
+    color: #a370ff;
+}
+
+/* =========================================================================
+   Responsive Design
+   ========================================================================= */
+@media (max-width: 992px) {
+    .container {
+        padding: 1.5rem;
+    }
+    .main-header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+    .main-nav a {
+        margin: 0 0.8rem;
+    }
+    .logo, .header-icon {
+        margin-bottom: 1rem;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 0;
+    }
+    .hero-content, .hero-image-placeholder {
+        max-width: 100%;
+        width: 100%;
+    }
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    .hero-section .description {
+        max-width: 100%;
+    }
+    .colorful-blob {
+        margin-top: 3rem;
+    }
+    .overlay-numbers {
+        right: auto;
+        top: auto;
+        bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        transform: none;
+        gap: 1rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        padding: 1.5rem;
+    }
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-footer p {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section .subtitle {
+        font-size: 1.2rem;
+    }
+    .main-nav a {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+    .nav-button {
+        padding: 0.5rem 1rem;
+    }
+    .colorful-blob {
+        width: 200px;
+        height: 200px;
+    }
+    .overlay-numbers {
+        bottom: 10px;
+    }
+    .num-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    .social-links a {
+        font-size: 1.5rem;
+        margin: 0 0.8rem;
+    }
+}
