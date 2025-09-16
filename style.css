@@ -1,0 +1,74 @@
+/* =========================================================================
+   General Body and Typography
+   ========================================================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid #3498db;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* =========================================================================
+   Header & Navigation
+   ========================================================================= */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+/* =========================================================================
+   Sections & Layout
+   ========================================================================= */
+.section {
+    margin-bottom: 3rem;
+}
+
+/* =========================================================================
