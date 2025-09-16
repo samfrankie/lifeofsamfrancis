@@ -1,6 +1,6 @@
 # Data Analytics Portfolio
 
-### **Hi, I'm [Your Name]!** 👋
+### **Hi, I'm Sam Pratico!** 👋
 
 Welcome to my data analytics portfolio. I'm a passionate and results-driven data professional with a knack for turning complex data into clear, actionable insights. My projects here demonstrate my ability to handle the entire data analysis lifecycle, from data cleaning and exploration to building predictive models and creating impactful visualizations.
 
@@ -8,11 +8,11 @@ Welcome to my data analytics portfolio. I'm a passionate and results-driven data
 
 ### **My Key Skills**
 
-* **Programming**: Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn), SQL
-* **Data Visualization**: Tableau, Matplotlib, Seaborn
+* **Programming**: Python (Pandas, NumPy), SQL
+* **Data Visualization**: Tableau
 * **Database Management**: SQL (PostgreSQL, MySQL)
-* **Statistical Analysis**: A/B Testing, Regression Analysis, Hypothesis Testing
-* **Machine Learning**: Supervised Learning (Classification, Regression)
+* **Statistical Analysis**: 
+* **Machine Learning**: 
 * **Tools & Platforms**: Jupyter Notebook, GitHub, Excel
 
 ---
@@ -50,4 +50,12 @@ Here's a selection of my key projects, each showcasing a different aspect of my 
 * **Tools**: PostgreSQL, SQL
 * **Key Findings**: The queries provided a single source of truth for business metrics, reducing reporting time by 50% and improving decision-making speed.
 
-    [**View Project**
+    [**View Project**](https://github.com/[YourUsername]/[YourRepository]/tree/main/projects/sql-dashboard)
+
+---
+
+### **Get in Touch!**
+
+* **LinkedIn**: [linkedin.com/in/yourprofile]
+* **Email**: [your.email@example.com]
+* **Portfolio Website**: [your-username.github.io]
