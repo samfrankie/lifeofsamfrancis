@@ -25,41 +25,71 @@
             <div class="header-icon">M</div>
         </header>
 
-                <section class="section">
-            <h2 style="text-align: left;">E-commerce Sales Forecasting</h2>
+            <section class="section">
+            <h2 style="text-align: left;">Customer Churn Prediction</h2>
             <p style="text-align: left; font-size: 1.2rem;">
-                Developed a time-series forecasting model using Python and the Prophet library to predict future sales for an online retailer.
+                Built a classification model to identify customers at risk of churning for a telecommunications company.
             </p>
         </section>
 
         <section class="section">
             <h3 style="color: #ffffff;">Project Overview</h3>
             <p>
-                This project focuses on building a time-series forecasting model to predict future sales for an online retailer. The goal is to provide data-driven insights that can assist with inventory management, marketing strategy, and resource allocation. By accurately forecasting sales, the business can avoid stockouts and reduce excess inventory costs.
+                This project aims to build a predictive model to identify customers who are likely to churn (i.e., cancel their service) for a telecommunications company. By proactively identifying at-risk customers, the business can implement targeted retention strategies, such as special offers or personalized support, to improve customer lifetime value and reduce churn rates.
             </p>
+        </section>
+
+        <section class="section">
+            <h3 style="color: #ffffff;">The Business Problem</h3>
             <p>
-                The project addresses the challenge of predicting future demand by developing a reliable forecasting model, which helps prevent lost sales, reduces inventory costs, and improves marketing efficiency.
+                Customer churn is a significant challenge for subscription-based businesses. It's often more expensive to acquire a new customer than to retain an existing one. Predicting which customers are likely to leave allows a company to intervene before it's too late. The model will help answer key business questions like:
             </p>
+            <ul>
+                <li>Which customers are most likely to churn in the near future?</li>
+                <li>What factors are the strongest predictors of churn?</li>
+                <li>What are the characteristics of high-risk customer segments?</li>
+            </ul>
         </section>
 
         <section class="section">
             <h3 style="color: #ffffff;">Methodology</h3>
             <p>
-                The analysis followed a standard data science workflow, from data collection and cleaning to model evaluation and visualization.
+                The project follows a standard machine learning pipeline:
             </p>
             <ul>
-                <li>**Data Cleaning & Preprocessing**: Handled missing values, converted data types, and aggregated sales to a daily level.</li>
-                <li>**Exploratory Data Analysis (EDA)**: Visualized sales trends over time to identify seasonality and the impact of holidays.</li>
-                <li>**Modeling**: A time-series forecasting model was developed using **Facebook's Prophet library**.</li>
-                <li>**Model Evaluation**: The model was evaluated using a holdout period to compare forecasted sales against actual sales, measuring performance with metrics like Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE).</li>
-                <li>**Insights & Visualization**: The final model provides forecasts visualized on a graph, along with key insights on seasonal trends and special events.</li>
+                <li><strong>Data Collection</strong>: Utilized a publicly available dataset containing customer information and a churn status.</li>
+                <li><strong>Data Cleaning & Preprocessing</strong>: Handled missing values, converted categorical features to numerical ones using one-hot encoding, and scaled numerical data.</li>
+                <li><strong>Exploratory Data Analysis (EDA)</strong>: Analyzed customer demographics, service usage, and contract details to uncover relationships with churn.</li>
+                <li><strong>Feature Engineering</strong>: Created new features, such as <code>TotalCharges</code> and <code>MonthlyCharges</code>, to provide more predictive power to the model.</li>
+                <li><strong>Model Building</strong>: Split the data into training and testing sets. Trained a **Random Forest Classifier**, which is well-suited for this type of classification problem. Evaluated the model using a **confusion matrix**, **classification report**, and **ROC curve**.</li>
+                <li><strong>Results & Interpretation</strong>: Analyzed the model's performance and extracted feature importance scores to understand which variables most influence a customer's decision to churn.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3 style="color: #ffffff;">Key Findings</h3>
+            <ul>
+                <li><strong>Contract Type</strong> and <strong>Monthly Charges</strong> were found to be among the strongest predictors of churn. Customers on month-to-month contracts and those with higher monthly fees were significantly more likely to churn.</li>
+                <li>The <strong>Random Forest model</strong> achieved a high prediction accuracy, outperforming a baseline model.</li>
+                <li>The insights gained can be used to inform business strategies, such as offering long-term contracts to at-risk customers or adjusting pricing models.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3 style="color: #ffffff;">Technologies Used</h3>
+            <ul>
+                <li><strong>Python</strong>: Core programming language.</li>
+                <li><strong>Pandas & NumPy</strong>: For data manipulation and numerical operations.</li>
+                <li><strong>Scikit-learn</strong>: For machine learning modeling and evaluation.</li>
+                <li><strong>Matplotlib & Seaborn</strong>: For data visualization.</li>
+                <li><strong>Jupyter Notebook</strong>: For reproducible analysis.</li>
             </ul>
         </section>
 
         <section class="section">
             <h3 style="color: #ffffff;">Project Files</h3>
             <div class="project-links" style="text-align: left;">
-                <a href="e-commerce-sales-forecasting.ipynb" target="_blank">View Jupyter Notebook</a>
+                <a href="customer-churn-prediction.ipynb" target="_blank">View Jupyter Notebook</a>
                 <a href="README.md" target="_blank">View Project README</a>
             </div>
         </section>
