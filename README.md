@@ -56,6 +56,6 @@ Here's a selection of my key projects, each showcasing a different aspect of my 
 
 ### **Get in Touch!**
 
-* **LinkedIn**: [linkedin.com/in/yourprofile]
-* **Email**: [your.email@example.com]
-* **Portfolio Website**: [your-username.github.io]
+* **LinkedIn**: [linkedin.com/in/spratico]
+* **Email**: [samfrankiep97@gmail.com]
+* **Portfolio Website**: [samfrankie.github.io]
