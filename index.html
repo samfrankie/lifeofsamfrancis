@@ -1,110 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Pratico | Data Analytics Portfolio</title>
-    <style>
-        /* Basic styles for a clean, professional look */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 1rem;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .section h2 {
-            font-size: 1.8rem;
-            border-bottom: 2px solid #3498db;
-            display: inline-block;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            color: #2c3e50;
-        }
-        .project-card {
-            background-color: #ecf0f1;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .project-card h3 {
-            margin-top: 0;
-            color: #3498db;
-        }
-        .project-card p {
-            margin-bottom: 1rem;
-        }
-        .project-card a {
-            text-decoration: none;
-            color: #2980b9;
-            font-weight: bold;
-        }
-        .project-card a:hover {
-            text-decoration: underline;
-        }
-        .social-links a {
-            display: inline-block;
-            margin-right: 1rem;
-            color: #3498db;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            color: #2980b9;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-        
-    <div class="container">
-        <header>
-            <h1>Sam Pratico</h1>
-            <p>Data Analyst | Turning Data into Actionable Insights</p>
-            <p><nav> <a href="index.html">Portfolio</a> | <a href="blog.html">Blog</a> </nav></p>
-        </header>
 
+    <div class="background-gradient"></div> <div class="container">
+        <header class="main-header">
+            <div class="logo">Sam Pratico</div>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="#about-me" class="nav-button">About</a> <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-icon">M</div> </header>
 
-        
-        <section class="section about-me">
-            <h2>About Me</h2>
-            <p>
-                I am a passionate and results-driven Data Analyst with a strong background in SQL, Python, and data visualization tools like Tableau. My expertise lies in cleaning, analyzing, and interpreting complex datasets to help businesses make data-driven decisions. I am proficient in statistical analysis and machine learning, and I enjoy building predictive models to solve real-world problems.
-            </p>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Turning Data into Insights</h1>
+                <p class="subtitle">A Data Analytics Portfolio</p>
+                <p class="description">
+                    I am a passionate and results-driven Data Analyst with a strong background in SQL, Python, and data visualization tools like Tableau. My expertise lies in cleaning, analyzing, and interpreting complex datasets to help businesses make data-driven decisions.
+                </p>
+            </div>
+            <div class="hero-image-placeholder">
+                <div class="colorful-blob"></div>
+                <div class="overlay-numbers">
+                    <span class="num-circle">01</span>
+                    <span class="num-circle">02</span>
+                    <span class="num-circle">03</span>
+                </div>
+            </div>
         </section>
 
-        <section class="section portfolio">
+        <section id="about-me" class="section">
+            <h2>About Me</h2>
+            <p>
+                I am proficient in statistical analysis and machine learning, and I enjoy building predictive models to solve real-world problems. My goal is to leverage data to drive strategic growth and operational efficiency for businesses.
+            </p>
+            <h3>My Key Skills</h3>
+            <ul class="skills-list">
+                <li>**Programming**: Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn), SQL</li>
+                <li>**Data Visualization**: Tableau, Matplotlib, Seaborn</li>
+                <li>**Database Management**: SQL (PostgreSQL, MySQL)</li>
+                <li>**Statistical Analysis**: A/B Testing, Regression Analysis, Hypothesis Testing</li>
+                <li>**Machine Learning**: Supervised Learning (Classification, Regression)</li>
+                <li>**Tools & Platforms**: Jupyter Notebook, GitHub, Excel</li>
+            </ul>
+        </section>
+
+        <section id="portfolio" class="section">
             <h2>Portfolio Projects</h2>
 
             <div class="project-card">
@@ -112,7 +62,10 @@
                 <p>
                     Developed a time-series forecasting model using Python and the Prophet library to predict future sales for an online retailer. The project included data cleaning, exploratory data analysis, and model evaluation, providing key insights for inventory management.
                 </p>
-                <a href="projects/e-commerce-sales-forecasting/e-commerce_sales_forecasting.ipynb" target="_blank">View Notebook</a>
+                <div class="project-links">
+                    <a href="projects/e-commerce-sales-forecasting/e-commerce_sales_forecasting.ipynb" target="_blank">View Notebook</a>
+                    <a href="projects/e-commerce-sales-forecasting/README.md" target="_blank">View Details</a>
+                </div>
             </div>
 
             <div class="project-card">
@@ -120,7 +73,10 @@
                 <p>
                     Built a classification model to identify customers at risk of churning. Using scikit-learn in Python, I analyzed customer behavior data, engineered new features, and deployed a Random Forest model, achieving a high prediction accuracy.
                 </p>
-                <a href="projects/customer-churn-prediction/customer_churn_prediction.ipynb" target="_blank">View Notebook</a>
+                <div class="project-links">
+                    <a href="projects/customer-churn-prediction/customer_churn_prediction.ipynb" target="_blank">View Notebook</a>
+                    <a href="projects/customer-churn-prediction/README.md" target="_blank">View Details</a>
+                </div>
             </div>
 
             <div class="project-card">
@@ -128,12 +84,14 @@
                 <p>
                     Created a set of SQL queries to extract, transform, and load data from a simulated database to populate a business intelligence dashboard. The project focused on optimizing query performance and generating key performance indicators (KPIs) for stakeholders.
                 </p>
-                <a href="projects/sql-dashboard/sql_queries.sql" target="_blank">View Queries</a>
+                <div class="project-links">
+                    <a href="projects/sql-dashboard/sql_queries.sql" target="_blank">View Queries</a>
+                    <a href="projects/sql-dashboard/README.md" target="_blank">View Details</a>
+                </div>
             </div>
+        </section>
 
-            </section>
-
-        <section class="section contact">
+        <section id="contact" class="section">
             <h2>Contact</h2>
             <p>Feel free to connect with me!</p>
             <div class="social-links">
@@ -143,6 +101,11 @@
                 <a href="path/to/your/resume.pdf" target="_blank">Resume</a>
             </div>
         </section>
+
+        <footer class="main-footer">
+            <p>2024 Sam Pratico Portfolio</p>
+            <p><a href="mailto:samfrankiep97@gmail.com">www.sampratico.com</a></p>
+        </footer>
     </div>
 
 </body>
