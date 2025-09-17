@@ -508,3 +508,64 @@ a:hover {
         margin: 0 0.8rem;
     }
 }
+
+
+/* =========================================================================
+   Blog Post Specific Styles
+   ========================================================================= */
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+    color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.post-content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #c0c0c0;
+}
+
+.post-content pre {
+    background-color: #2a2a2a;
+    border-left: 3px solid #cb3bf5;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border-radius: 5px;
+}
+
+.post-content code {
+    font-family: 'Roboto Mono', monospace;
+    color: #8c52ff;
+    font-size: 0.9rem;
+}
+
+.post-content ul,
+.post-content ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
